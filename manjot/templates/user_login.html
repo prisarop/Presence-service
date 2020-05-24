@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Login</title>
+    <link rel = "icon" href = "{% static 'images/skill.png' %}" type = "image/png"> 
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+<div class="col-md-6 offset-md-3">
+<div class="container border border-primary mt-md-3">
+<h2 class="text-primary text-center mt-md-2"> Dochub</h2>
+</div>
+</div>
+<div class="col-md-6 offset-md-3">
+<div class="container border rounded shadow p-3 mb-5 bg-white rounded" style="margin-top: 100px; background:F3F9FC;">
+<div class="col-md-8 offset-md-2">
+<h2 class="border rounded-pill bg-dark text-center text-light shadow-sm p-2 mb-5 rounded" style="margin-top: 20px;">User Login</h2>
+</div>
+<div class="container" style="margin-top: 50px;">
+        <form action='user_login' method="POST">
+        {% csrf_token %}
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="form-control no-border" placeholder="Enter Username" name="user" >
+            </div>
+            <div class="form-group mt-md-4">
+                <label>Password</label>
+                <input type="password" class="form-control no-border" placeholder="Enter Password" name="pswd">
+            </div>
+            
+        </div>
+        <div class="col-md-6 offset-md-3 text-center">
+        <input type="submit" class="btn btn-outline-danger btn-block mt-md-3" value="Login">
+        <div class="col-md-4 offset-md-4 text-center">
+        <label class="mt-md-2">- OR -</label>
+        </div>
+        <a href="register"><input type="button" class="btn btn-danger btn-block mt-md-2" value="Sign Up"></a>
+        </div>
+    </div>
+    <p> </p>
+</div>
+</div>
+</div>
+
+</body>
