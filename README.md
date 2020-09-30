@@ -9,3 +9,5 @@
     sqlmigrate dochub 0001" then run "python manage.py makemigrate".
 7. Even after that program doesn't run then run above command with put 0002 in place of 0001.
 8. Now you are done.
+
+This project will let you know about the weather of your city and Pollutant present in the air.
